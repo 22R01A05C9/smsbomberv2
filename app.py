@@ -349,7 +349,8 @@ def sending():
         return render_template('home.html',info="MAXIMUM 150 SMS ONLY",times=times,number=number)
     else:
         m1=threading.Thread(target=main,args=(number,times,atime,))
-        return render_template('home.html',times=times,speed=atime)
+        m1.start()
+        return render_template('home.html',times=times,number1=number,speed=atime)
     
     
 if __name__=='__main__':
