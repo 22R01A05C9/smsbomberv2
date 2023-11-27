@@ -203,7 +203,7 @@ def bbq(number):
 
 def main(number,times,atime):
     i=0
-    stime=atime/1000
+    stime=(atime/1000)-0.99
     while i<times:
         if i<times:
             if mywalletly(number):
@@ -354,4 +354,4 @@ def sending():
     
     
 if __name__=='__main__':
-    app.run(debug=True,host='192.168.0.108')
+    app.run()
